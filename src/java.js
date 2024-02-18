@@ -1,19 +1,24 @@
 function updateTime() {
-  let London = document.querySelector("#London");
-  let dateElementLondon = document.querySelector(".date");
-  let timeElementLondon = document.querySelector(".time");
-  LondonTime = moment().tz("Europe/London");
+  let BishkekElement = document.querySelector("#Bishkek");
+  let dateElementBishkek = Bishkek.querySelector(".date");
+  let timeElementBishkek = Bishkek.querySelector(".time");
+  let BishkekTime = moment().tz("Asia/Bishkek");
 
-  dateElement.innerHTML = LondonTime.format("MMMM, Do, YYYY");
-  timeElement.innerHTML = LondonTime.format("h:mm:ss [<small>] A [</small>]");
+  dateElementBishkek.innerHTML = BishkekTime.format("MMMM, Do, YYYY");
+  timeElementBishkek.innerHTML = BishkekTime.format(
+    "h:mm:ss [<small>] A [</small>]"
+  );
 
-  let BudapestElement = document.querySelector("#Budapest");
-  let dateElementBudapest = document.querySelector(".date");
-  let timeElementBudapest = document.querySelector(".time");
-  BudapestTime = moment().tz("Europe/Budapest");
+  let ParisElement = document.querySelector("#paris");
+  let dateElementParis = Paris.querySelector(".date");
+  let timeElementParis = Paris.querySelector(".time");
+  let ParisTime = moment().tz("Europe/Paris");
 
-  dateElement.innerHTML = BudapestTime.format("MMMM, Do, YYYY");
-  timeElement.innerHTML = BudapestTime.format("h:mm:ss [<small>] A [</small>]");
+  dateElementParis.innerHTML = ParisTime.format("MMMM, Do, YYYY");
+  timeElementParis.innerHTML = ParisTime.format(
+    "h:mm:ss [<small>] A [</small>]"
+  );
 }
+
 updateTime();
 setInterval(updateTime, 1000);
